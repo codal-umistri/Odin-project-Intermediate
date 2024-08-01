@@ -137,11 +137,6 @@ aside {
 aside ul {
     display: flex;
     flex-direction: row;
-    font-size: 1.8rem;
-    text-align: left;
-    color: var(--SidebarCl);
-    margin-left: .5rem;
-    list-style-type: none;
 }
 
 aside ul,
@@ -225,7 +220,6 @@ main {
     border-radius: 1rem;
     display: grid;
     grid-template-rows: auto;
-    overflow: hidden;
     transition: transform 0.4s ease, box-shadow 0.3s ease;
 }
 
