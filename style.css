@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    box-sizing: border-box;
+    --MainBg: #E2E8F0;
+    --SidebarBg: #2563eb;
+    --SidebarCl: #f8fafc;
+    --HeaderBg: #F8FAFC;
+    --CardTextColor: #9ca3af;
+    --CardHeaderColor: #030712;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.main {
+    display: grid;
+    grid-template: 1fr 5fr / 1fr 5fr;
+    background-color: var(--MainBg);
+}
+
+/* Header */
+header {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    background-color: var(--HeaderBg);
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    padding-left: 3rem;
+    padding-top: 1.8rem;
+}
+
+header svg {
+    width: 2.2rem;
+}
+
+.header-top {
+    grid-row: 1;
+    display: grid;
+    grid-column: 2fr 1fr;
+    list-style-type: none;
+}
+
+.header-top-left,
+.header-top-right {
+    display: flex;
+    flex-direction: row;
+}
+
+.header-top-left,
+.header-bottom-left {
+    grid-column: 1;
+    align-items: center;
+}
+
+.header-top-right,
+.header-bottom-right {
+    grid-column: 2;
+    justify-content: center;
+    gap: 4rem;
+    align-items: center;
+}
+
+.header-top-right img {
+    width: 4rem;
+    border-radius: 50%;
+    height: 4rem;
+}
+
+.header-top-right li {
+    font-size: 1.5rem;
+}
+
+.header-top-left input[type=text] {
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    border: none;
+    width: 60rem;
+    background: var(--MainBg);
+    border-radius: 2rem;
+    margin-left: 1rem;
+}
+
+.header-bottom {
+    grid-row: 2;
+    display: grid;
+    grid-column: 2fr 1fr;
+}
+
+.header-bottom-right {
+    padding-left: 40rem;
+}
+
+.header-bottom-right button {
+    color: var(--SidebarCl);
+    background-color: var(--SidebarBg);
+    font-size: 1.6rem;
+    border-radius: 1.5rem;
+    width: 9rem;
+    height: 3rem;
+    border: none;
+    font-weight: bold;
+}
+
+.header-bottom-right,
+.header-bottom-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 2rem;
+    align-items: center;
+}
+
+.header-bottom-left h3 {
+    font-size: 2rem;
+}
+
+.header-bottom-left img {
+    width: 6rem;
+    border-radius: 50%;
+    height: 6rem;
+}
+
+/* SideBar */
+aside {
+    grid-row: 1/3;
+    background-color: var(--SidebarBg);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+aside ul {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.8rem;
+    text-align: left;
+    color: var(--SidebarCl);
+    margin-left: .5rem;
+    list-style-type: none;
+}
+
+aside ul,
+aside li {
+    font-size: 1.8rem;
+    text-align: left;
+    color: var(--SidebarCl);
+    margin-left: .5rem;
+    list-style-type: none;
+}
+
+.sidebar-top>li {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+}
+
+aside svg {
+    width: 1.8rem;
+}
+
+.sidebar-top svg {
+    width: 5rem;
+}
+
+.sidebar-top,
+.sidebar-mid div,
+.sidebar-bottom div {
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar-mid,
+.sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-mid div,
+.sidebar-bottom div {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-mid svg,
+.sidebar-bottom svg {
+    margin-right: 1.8rem;
+}
+
+/* Main Content */
+main {
+    grid-column: 2;
+    grid-row: 2;
+    background-color: var(--MainBg);
+    display: grid;
+    grid-template: 1fr 1fr / 2.5fr 1fr;
+    font-size: 2rem;
+    padding-top: 1.5rem;
+}
+
+.projects {
+    grid-row: 1/3;
+}
+
+.projects h1 {
+    font-size: 1.8rem;
+    padding-left: 2rem;
+}
+
+.project-collection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    padding: 1.5rem;
+}
+
+.project-card {
+    padding: 2.45rem;
+    background-color: var(--HeaderBg);
+    height: 20rem;
+    border-left: 1rem solid #eab308;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-rows: auto;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    text-align: left;
+    color: var(--CardTextColor);
+    font-size: 1.5rem;
+}
+
+.project-card p {
+    text-align: left;
+    color: var(--CardTextColor);
+    font-size: 1.45rem;
+}
+
+.project-card h3 {
+    color: var(--CardHeaderColor);
+}
+
+.project-card svg {
+    width: 2rem;
+}
+
+.project-card>div {
+    display: flex;
+    justify-self: self-end;
+    gap: 2.5rem;
+}
+
+/* Announcement */
+.announcements {
+    grid-column: 2;
+}
+
+.announcements h1 {
+    font-size: 1.8rem;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.announcementsCard {
+    padding: 1rem;
+    background-color: var(--HeaderBg);
+    height: 300px;
+    width: 270px;
+    margin-left: 2rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
+    margin-top: 1.5rem;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.announcementsCard:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.announcementsCard h3,
+.announcementsCard p {
+    text-align: left;
+    color: var(--CardTextColor);
+    font-size: 1.2rem;
+
+}
+
+.announcementsCard h3 {
+    color: var(--CardHeaderColor);
+    font-size: 1.4rem;
+}
+
+.announcementsCard>div:not(:last-child) {
+    border-bottom: 1px solid var(--CardTextColor);
+    padding-bottom: 1.5rem;
+}
+
+/* Trending */
+.trending {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.trending h1 {
+    font-size: 1.8rem;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.trendingCard img {
+    border-radius: 50%;
+    width: 5.5rem;
+    height: 5.5rem;
+}
+
+.trendingCard {
+    padding: 1.5rem;
+    background-color: var(--HeaderBg);
+    height: 330px;
+    width: 270px;
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+    align-items: center;
+    justify-items: flex-start;
+    margin-top: 1.5rem;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.trendingCard:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.trendingCard>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 2rem;
+    align-items: center;
+}
+
+.trendingCard>div span {
+    text-align: left;
+}
+
+.trendingCard p {
+    font-size: 1.4rem;
+}
+
+.trendingCard h3 {
+    color: var(--CardTextColor);
+    font-size: 1.4rem;
+}
